@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * Implementation of hook_menu_alter().
+ */
+
+function defaultuseredit_menu_alter(&$items) {
+  $items['user/%user_uid_optional'] = $items['user/%user_category/edit'];
+  unset($items['user/%user/view']);
+  unset($items['user/%user_uid_optional']['type']);
+  $items['user/%user_category/edit']['type'] = MENU_DEFAULT_LOCAL_TASK; 
+}

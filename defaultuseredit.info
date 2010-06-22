@@ -1,0 +1,3 @@
+name = Default User edit Page
+description = Defaults user/* to edit, removes user/view
+core = 6.x
